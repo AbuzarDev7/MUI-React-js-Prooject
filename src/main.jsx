@@ -1,15 +1,17 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
-import Navbar from './comonents/Navbar.jsx'
-import { BrowserRouter } from 'react-router'
-import Login from './pages/Admin/Login.jsx'
-import Dashboard from './pages/Admin/Dashboard.jsx'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import { store } from './config/redux/store/store'
+import { Provider} from 'react-redux'
+
 
 createRoot(document.getElementById('root')).render(
-     <BrowserRouter>
-                                <Navbar/>
+
+        <Provider store={store}>
+                
+                <BrowserRouter>
+                                <Navbar
+                                />
                         <Routes>
                                 {/* Public */}
                                 <Route path='login' element={<Login />} />
@@ -23,7 +25,7 @@ createRoot(document.getElementById('root')).render(
 
                                 <Route
                                         path="students"
-                                        element={<ProtectedRoutes component={<StudentDashboard />} role={['Admin']} />}
+                                        element={<ProtectedRoutes component={<Student />} role={['Admin']} />}
                                 />
 
                                 <Route
@@ -63,5 +65,6 @@ createRoot(document.getElementById('root')).render(
 
 
                         </Routes>
-                </Brow>
+                </BrowserRouter>
+        </Provider>
 )
