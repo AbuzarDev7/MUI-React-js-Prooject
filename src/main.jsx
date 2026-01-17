@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './config/redux/store/store'
 import './index.css'
-import Navbar from './components/Navbar'
+
 import ProtectedRoutes from './components/ProtectedRoutes'
 
 import Login from './pages/Admin/Login'
@@ -26,7 +26,7 @@ import Dashboard from './pages/Admin/Dashboard'
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <BrowserRouter>
-      <Navbar />
+  
       <Routes>
         <Route path="/login" element={<Login />} />
 
