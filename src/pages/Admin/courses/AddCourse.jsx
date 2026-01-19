@@ -87,7 +87,7 @@ const AddCourse = () => {
     setLoading(true);
 
     try {
-      console.log("🔄 Adding course...", formData);
+      console.log(" Adding course...", formData);
 
     
       await addDoc(collection(db, "courses"), {
@@ -133,7 +133,7 @@ const AddCourse = () => {
           </p>
         </div>
 
-        {/* ========== MAIN FORM */}
+        {/*  MAIN FORM */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             
@@ -266,7 +266,7 @@ const AddCourse = () => {
           </form>
         </div>
 
-        {/* ========== POPULAR COURSE TEMPLATES ========== */}
+      
         <div className="bg-white rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
             <span className="text-3xl">⚡</span> Quick Add - Popular Courses

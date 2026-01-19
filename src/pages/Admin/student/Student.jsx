@@ -34,7 +34,7 @@ const Students = () => {
       {/* Sidebar */}
       <Navbar />
 
-      {/* Main content - Mobile pe full width, Desktop pe sidebar ke baad */}
+    
       <main className="min-h-screen bg-gray-100 md:ml-64">
         <div className="p-6 pt-20 md:pt-6">
           {/* Heading */}
